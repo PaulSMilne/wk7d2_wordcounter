@@ -36,13 +36,13 @@ public class WordCounter extends AppCompatActivity { //start WordCounter class s
             public void onClick(View view) { //open OnClick(View view)
                 Log.d("WordCounter", "Count button clicked!");
                 String sentence = mSentenceEditText.getText().toString();
-                Log.d("EightBall", "The sentence entered was '" + mSentence + "'");
+                Log.d("WordCounter", "The sentence entered was '" + sentence + "'");
                 mSentence = new CountWords(sentence);
                 int wordCount = mSentence.countWords();
 
                 mAnswerText = (TextView) findViewById(R.id.answer_text);
 
-                int answer = wordCount;
+                String answer = "There are "+ wordCount + " words in the sentence.";
 
                 mAnswerText.setText(answer);
             } //close onclick(View view)
